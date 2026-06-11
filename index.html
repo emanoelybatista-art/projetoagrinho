@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Gestão de Safra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌾 Projeto Agrinho 2026</h1>
+            <p>Controle Financeiro e Produtivo da Safra</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="card card-ganhos">
+                <h3>Total Ganho</h3>
+                <p id="total-ganhos">R$ 0,00</p>
+            </div>
+            <div class="card card-gastos">
+                <h3>Total Gasto</h3>
+                <p id="total-gastos">R$ 0,00</p>
+            </div>
+            <div class="card card-perdido">
+                <h3>Total Perdido</h3>
+                <p id="total-perdido">R$ 0,00</p>
+            </div>
+            <div class="card card-saldo">
+                <h3>Saldo Líquido</h3>
+                <p id="saldo-liquido">R$ 0,00</p>
+            </div>
+        </section>
+
+        <div class="grid-layout">
+            <section class="form-section">
+                <h2>📋 Registrar Novo Dado</h2>
+                <form id="safra-form">
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Registro:</label>
+                        <select id="tipo" required>
+                            <option value="ganho">💰 Ganho (Venda)</option>
+                            <option value="gasto">📉 Gasto (Insumos, Maquinário, etc)</option>
+                            <option value="perdido">❌ Perda (Pragas, Clima, etc)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição / Cultura Plantada:</label>
+                        <input type="text" id="descricao" placeholder="Ex: Soja, Milho, Adubo, Diesel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">Valor (R$):</label>
+                        <input type="number" id="valor" step="0.01" placeholder="0.00" required>
+                    </div>
+                    <button type="submit">Adicionar à Safra</button>
+                </form>
+            </section>
+
+            <section class="table-section">
+                <h2>📊 Histórico da Safra 2026</h2>
+                <div class="table-wrapper">
+                    <table id="safra-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descrição/Cultura</th>
+                                <th>Valor</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho - Tecnologia a Serviço do Campo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
